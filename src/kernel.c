@@ -3,7 +3,7 @@
 #include "../include/io.h"
 #include "../include/kbd.h"
 #include "../include/string.h"
-#include "../include/time.h"
+// #include "../include/time.h"
 #include "../include/math_shell.h"
 #include "../include/parsing.h"
 #include "../include/bool.h"
@@ -208,9 +208,6 @@ int main(void)
 					printf("\n\t crypto             - \tlists all cryptography utilities");
 					printf("\n\t clear              - \tclears the screen");
 					printf("\n\t fontcolor          - \tchange default font color");
-					printf("\n\t datetime           - \tdisplays current date and time");
-					printf("\n\t date               - \tdisplays current date");
-					printf("\n\t clock              - \tdisplays clock");
 					printf("\n\t history            - \tdisplays commands history");
 					printf("\n\t reboot             - \treboots system");
 					printf("\n\t shutdown           - \tsends shutdown signal");
@@ -228,21 +225,6 @@ int main(void)
 				{
 					terminal_initialize(default_font_color, COLOR_BLACK);
 					strcpy(&buffer[strlen(buffer)], "");
-				}
-				else if (strlen(buffer) > 0 && strcmp(buffer, "datetime") == 0)
-				{
-					printf("\nCurrent datetime: ");
-					datetime();
-				}
-				else if (strlen(buffer) > 0 && strcmp(buffer, "date") == 0)
-				{
-					printf("\nCurrent date: ");
-					date();
-				}
-				else if (strlen(buffer) > 0 && strcmp(buffer, "clock") == 0)
-				{
-					printf("\nCurrent clock: ");
-					clock();
 				}
 				else if (strlen(buffer) > 0 && strcmp(buffer, "reboot") == 0)
 				{
